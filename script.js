@@ -13,6 +13,7 @@ $.ajax({
     method: "GET",
     url: statsQueryURL,
 }).then(function (response) {
+    //key features: Make, Model, BodyClass, DisplacementL, EngineCylinders, EngineHP
     var data = response.results
     $("#make-id").text("Make : " + data.Make);
     $("#model-id").text("Model : " +data.Model);
@@ -20,15 +21,21 @@ $.ajax({
     $("#engine-cylinders").text("Engine cylinders: " + data.EngineCylinders);
     $("#engine-hp").text("Horsepower: " + data.EngineHP);
 })
+
 // Second API: Unsplash
 // API Key: pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
-// database URL: https://api.unsplash.com/search/photos?page=1&query={KEYWORD}&client_id={API_KEY}
+// database URL: https://api.unsplash.com/search/photos?page=1&query={KEYWORD}&client_id=pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
 var keyWord;    //get user input val()
 var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg"
 
-const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${keyWord}&client_id=${apiKey}`
-
-//key features: Make, Model, BodyClass, DisplacementL, EngineCylinders, EngineHP
+const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${data.Make}%20logo&client_id=${apiKey}`
 
 
-//ajax call for 
+//ajax call for images from unsplash
+$.ajax({
+    method: "GET",
+    url: imageQueryURL,
+}).then(function (response) {
+    var data = response.results[0].urls.thumb
+    $("#car-picture").attr("src", data);
+})
