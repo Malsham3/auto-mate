@@ -5,47 +5,71 @@ body {
     background-size: cover;
     
 }
+/* added style to shorten height of header */
+.hero-body {
+    padding-top: 0;
+    padding-bottom: 5px;
+}
 
+
+
+}
 #logo {
     border-radius: 15px;
 }
 
 #logoText {
     font-size: 5.5rem;
-
+    
 }
 
 #logoText2 {
     font-size: 2.5rem;
 }
 
+.subtitle {
+    text-align: center;
+}
 
+/* pulled the pop-up slider that appears when you hover over rgb and slid it up to darken */
 #test1 {
-    background-color: rgba(1, 1, 3, 0.432);
-    margin-left: 25px;
+    background-color: rgb(1, 1, 3);
+    /*removed margin-left in order to get tiles to center  */
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
+/* pulled the pop-up slider that appears when you hover over rgb and slid it up to darken */
 #test2 {
-    background-color:rgba(1, 1, 3, 0.432);
+    background-color:rgb(1, 1, 3);
     margin-left: 25px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;s
+}
+
+/* added style to center and change color to white */
+.label {
+    text-align: center;
+    color: white;
 }
 
 #test3 {
     background-color: rgba(1, 1, 3, 0.432);
-    margin-left: 25px;
+    
     margin-top: 20px;
 }
 
+/* pulled the pop-up slider that appears when you hover over rgb and slid it up to darken */
 #test4 {
-    background-color: rgba(1, 1, 3, 0.432);
-    margin-left: 25px;
+    background-color: rgb(1, 1, 3);
     margin-top: 20px;
 }
 
+/* added style to center and change text color to white */
+.title {
+    text-align: center;
+    color: white;
+}
 
 .button {
     background-color: rgba(172, 255, 47, 0.863);
