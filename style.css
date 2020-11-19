@@ -16,6 +16,14 @@ body {
 
 }
 
+.hero-body {
+    padding: 10px 24px;
+}
+
+.subtitle {
+    text-align: center;
+}
+
 #logoText2 {
     font-size: 2.5rem;
 }
@@ -23,27 +31,31 @@ body {
 
 #test1 {
     background-color: rgba(3, 3, 10, 0.904);;
-    margin-left: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 #test2 {
     background-color: rgba(3, 3, 10, 0.904);
-    margin-left: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 #test3 {
     background-color: rgba(3, 3, 10, 0.904);
-    margin-left: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
 }
 
 #test4 {
     background-color: rgba(3, 3, 10, 0.904);
-    margin-left: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
 }
 
