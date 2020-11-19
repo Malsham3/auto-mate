@@ -9,6 +9,8 @@
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 
 </head>
 
@@ -19,7 +21,7 @@
       <div class="container">
         <h1 class="title" id="logoText">
             <img src="autologo.jpg" width="75" height="50" id="logo">
-         Auto Mate
+         AUTO MATE
         </h1>
         <h2 class="subtitle">
          Vehicle Comparison at your fingertips
@@ -41,6 +43,7 @@
                                   <!-- .user1 for User Input for vehicle 1 -->
         <div class="user1">
           <input class="input" id="vin-1" type="text" placeholder="Enter full VIN here">
+          <input class="input" id="year-2" type="text" placeholder="Enter Year">
         </div>
       </div>
     </div>  
@@ -62,6 +65,7 @@
                                     <!-- .user2 for User Input for vehicle 2 -->
         <div class="user2">
           <input class="input" id="vin-2" type="text" placeholder="Enter full VIN here">
+          <input class="input" id="year-2" type="text" placeholder="Enter Year">
         </div>
       </div>
     </div>  
@@ -70,58 +74,61 @@
     <div class="btn2"> </div>              
   </div>
 </main>
+<!--<div class="column is-three-quarters" >
+  <p class="title"></p>
+  <div class="tile is-parent is-7"> -->
+   
+    <div< class="columns is-centered">
+      <div class="column is-three-fifths" id="test1">
+        <p class="title">COMPARE YOUR RIDE</p>
+        <p class="subtitle"></p>
+        <table class="table is-fullwidth">
+          <!-- Table content --> 
+          <tr>
+            <th></th>
+            <th>Vehicle #1</th>
+            <th>Vehicle #2</th>
+          </tr>
+          <tr>
+            <th>Make</th>
+            <td id="make-1">Honda</td>
+            <td id="make-2">Toyota</td>
+          </tr>  
+          <tr>
+            <th>Model</th>
+            <td id="model-1"></td>
+            <td id="model-2"></td>
+          </tr>
+          <tr>
+            <th>Body Style</th>
+            <td id="body-1"></td>
+            <td id="body-2"></td>
+          </tr>
+          <tr>
+            <th>Engine Size</th>
+            <td id="engine-1"></td>
+            <td id="engine-2"></td>
+          </tr>
+          <tr>
+            <th>Cylinders</th>
+            <td id="cylinder-1"></td>
+            <td id="cylinder-2"></td>
+          </tr>
+          <tr>
+            <th>Horsepower</th>
+            <td id="HP-1"></td>
+            <td id="HP-2"></td>
+          </tr>
+          </table>
+      </div>
+    </div>
+ 
+    
+</body>
+</html>
       
     
     
-  <!--<div class="column is-three-quarters" >
-    <p class="title"></p>
-    <div class="tile is-parent is-7"> -->
-     
-      <div< class="columns is-centered">
-        <div class="column is-three-fifths" id="test1">
-          <p class="title"></p>
-          <p class="subtitle"></p>
-          <table class="table is-fullwidth">
-            <!-- Table content --> 
-            <tr>
-              <th></th>
-              <th>Vehicle #1</th>
-              <th>Vehicle #2</th>
-            </tr>
-            <tr>
-              <th>Make</th>
-              <td id="make-1">Honda</td>
-              <td id="make-2">Toyota</td>
-            </tr>  
-            <tr>
-              <th>Model</th>
-              <td id="model-1"></td>
-              <td id="model-2"></td>
-            </tr>
-            <tr>
-              <th>Body Style</th>
-              <td id="body-1"></td>
-              <td id="body-2"></td>
-            </tr>
-            <tr>
-              <th>Engine Size</th>
-              <td id="engine-1"></td>
-              <td id="engine-2"></td>
-            </tr>
-            <tr>
-              <th>Cylinders</th>
-              <td id="cylinder-1"></td>
-              <td id="cylinder-2"></td>
-            </tr>
-            <tr>
-              <th>Horsepower</th>
-              <td id="HP-1"></td>
-              <td id="HP-2"></td>
-            </tr>
-            </table>
-        </div>
-      </div>
-   
   <!-- Comparison Table Container -->
   
 
@@ -130,9 +137,6 @@
   
   
 
-
-</body>
-</html>
 
 
 
