@@ -47,13 +47,13 @@ body {
 }
 
 
-#button1 {
+.button {
     background-color: rgba(172, 255, 47, 0.863);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
     
 }
 
-#button1:hover {
+.button:hover {
     transform: scale(1.05);
 }
 
