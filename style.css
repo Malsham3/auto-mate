@@ -1,5 +1,71 @@
-#imgTest {
-    margin-top: 6px;
+
+body {
+    background-image: url(Car-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
+
+#logo {
+    border-radius: 15px;
+}
+
+#logoText {
+    font-size: 5.5rem;
+
+}
+
+#logoText2 {
+    font-size: 2.5rem;
+}
+
+
+#test1 {
+    background-color: rgba(1, 1, 3, 0.432);
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#test2 {
+    background-color:rgba(1, 1, 3, 0.432);
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#test3 {
+    background-color: rgba(1, 1, 3, 0.432);
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+#test4 {
+    background-color: rgba(1, 1, 3, 0.432);
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+
+#button1 {
+    background-color: rgba(172, 255, 47, 0.863);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+    
+}
+
+#button1:hover {
+    transform: scale(1.05);
+}
+
+.table1 {
+    text-align: center;
+    
+}
+   
+.table2 {
+    text-align: center;
+    
+}
+
 
 
