@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -40,7 +40,7 @@
       <div class="control">
                                   <!-- .user1 for User Input for vehicle 1 -->
         <div class="user1">
-          <input class="input" type="text" placeholder="Enter full VIN here">
+          <input class="input" id="vin-1" type="text" placeholder="Enter full VIN here">
         </div>
       </div>
     </div>  
@@ -62,11 +62,11 @@
       <div class="control">
                                     <!-- .user2 for User Input for vehicle 2 -->
         <div class="user2">
-          <input class="input" type="text" placeholder="Enter full VIN here">
+          <input class="input" id="vin-2" type="text" placeholder="Enter full VIN here">
         </div>
       </div>
     </div>  
-    <button class="button is-medium is-fullwidth" id="button1"><strong>AUTO MATE!</strong></button>
+    <button class="button is-medium is-fullwidth" id="button2"><strong>AUTO MATE!</strong></button>
                                 <!-- .btn2 below for VIN search of vehicle 2 -->
     <div class="btn2">                
       
@@ -76,44 +76,7 @@
   <!--<div class="column is-three-quarters" >
     <p class="title"></p>
     <div class="tile is-parent is-7"> -->
-        <div class="column is-two-fifths" id="test3">
-          <div class="content">
-            <p class="title"></p>
-            <div class="tile is-one-third">
-                <article class="tile is-child notification is-danger">
-                  <p class="title">Wide tile</p>
-                  <p class="subtitle">Aligned with the right tile</p>
-                  <div class="content">
-                    <!-- Content -->
-                    <canvas id="myChart">
-                      <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                                var chart = new Chart(ctx, {
-                               // The type of chart we want to create
-                                type: 'line',
-                
-                                // The data for our dataset
-                                data: {
-                                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                                datasets: [{
-                                label: 'My First dataset',
-                                backgroundColor: 'rgb(255, 99, 132)',
-                                borderColor: 'rgb(255, 99, 132)',
-                                data: [0, 10, 5, 2, 20, 30, 45]
-                                        }]
-                                },
-                
-                              // Configuration options go here
-                                    options: {}
-                                });
-                      </script>
-                    </canvas>
-                  </div>   
-                </article> 
-              </div> 
-            </div>
-          </div>
-        </div>
+     
       </div> 
     </div>
   </div>
@@ -132,66 +95,46 @@
           <div class="table-container table1">
             <table class="table">
               <!-- Table content -->
-              <h2>Vehicle #1</h2>
+              <tr>
+                <th></th>
+                <th>Vehicle #1</th>
+                <th>Vehicle #2</th>
+              </tr>
+
+              
             <tr>
-              <th>Horsepower</th>
-              <td>300HP</td>
+              <th>Make</th>
+              <td id="make-1">Honda</td>
+              <td id="make-2">Toyota</td>
             </tr>  
             <tr>
-              <th>Torque</th>
-              <td>300TRQ</td>
+              <th>Model</th>
+              <td id="model-1"></td>
+              <td id="model-2"></td>
             </tr>
             <tr>
-              <th>Weight</th>
-              <td>3500LBS</td>
-            </tr>
-            <tr id=fuel>
-              <th>Fuel Economy</th>
-              <td>45MPG</td>
+              <th>Body Style</th>
+              <td id="body-1"></td>
+              <td id="body-2"></td>
             </tr>
             <tr>
-              <th>Seating</th>
-              <td>Seats 4</td>
+              <th>Engine Size</th>
+              <td id="engine-1"></td>
+              <td id="engine-2"></td>
             </tr>
             <tr>
-              <th>MSRP</th>
-              <td>$25,000</td>
+              <th>Cylinders</th>
+              <td id="cylinder-1"></td>
+              <td id="cylinder-2"></td>
+            </tr>
+            <tr>
+              <th>Horsepower</th>
+              <td id="HP-1"></td>
+              <td id="HP-2"></td>
             </tr>
           </table>
         </div>
-        <div class="content">
-          <div class="table-container table2">
-            <table class="table">
-              <!-- Table content -->
-              <h2>Vehicle #2</h2>
-            <tr>
-              <th>Horsepower</th>
-              <td>300HP</td>
-            </tr>  
-            <tr>
-              <th>Torque</th>
-              <td>300TRQ</td>
-            </tr>
-            <tr>
-              <th>Weight</th>
-              <td>3500LBS</td>
-            </tr>
-            <tr>
-              <th>Fuel Economy</th>
-              <td>45MPG</td>
-            </tr>
-            <tr>
-              <th>Seating</th>
-              <td>Seats 4</td>
-            </tr>
-            <tr>
-              <th>MSRP</th>
-              <td>$25,000</td>
-            </tr>
-          </table>
-        </div>
-            
-      </div>
+        
     </div>
   </div>
 
