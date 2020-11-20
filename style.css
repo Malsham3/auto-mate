@@ -52,17 +52,6 @@ body {
     100% {color: rgba(255, 0, 0,);}
 }    
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
 .hero-body {
     padding: 10px 24px;
 }
@@ -71,8 +60,6 @@ body {
     text-align: center;
 }
 
-=======
->>>>>>> a322737779d7f48221f77ea68dc87d2b07a6055f
 #logoText2 {
     font-size: 2.5rem;
 }
@@ -81,6 +68,7 @@ body {
 #test1 {
     background-color: rgba(3, 3, 10, 0.904);
     margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -88,6 +76,7 @@ body {
 #test2 {
     background-color: rgba(3, 3, 10, 0.904);
     margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
