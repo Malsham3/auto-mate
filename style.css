@@ -8,13 +8,61 @@ body {
 
 #logo {
     border-radius: 15px;
+    animation-duration: 15s;
+    animation-name: test;
+    position: relative;
+    animation-timing-function: ease;
+    margin-bottom: -7px;
+    
+    
+
 }
+@keyframes test {
+    0% {left:0px;top:0px;}
+    25% {left:660px; top:0px;}
+    50% {left:0px; top:0px;}
+    75% {left:0px; top:0px;}
+    100% {left:0px; top:0px;}
+
+    
+}
+
+
+
 
 #logoText {
     font-size: 5.5rem;
     font-family: 'Playball', cursive;
-
+    animation-name: loco;
+    animation-duration: 7s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
 }
+@keyframes loco {
+    /*from {color: rgb(245, 9, 9);}
+    to {color: rgb(165, 114, 114);}*/
+    0% {color: rgb(255, 0, 0);}
+    10% {color: rgb(250, 84, 7);}
+    20% {color: rgb(250, 205, 4);}
+    30% {color: rgb(201, 252, 82);}
+    40% {color: rgb(84, 250, 43);}
+    50% {color: rgb(84, 250, 43);}
+    60% {color: rgb(201, 252, 82);}
+    70% {color: rgb(250, 205, 4);}
+    80% {color: rgb(250, 84, 7);}
+    90% {color: rgba(250, 44, 44,);}
+    100% {color: rgba(255, 0, 0,);}
+}    
+
+
+
+
+
+
+
+
+
+
 
 #logoText2 {
     font-size: 2.5rem;
@@ -23,14 +71,14 @@ body {
 
 #test1 {
     background-color: rgba(3, 3, 10, 0.904);;
-    margin-left: 25px;
+    margin-left: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 #test2 {
     background-color: rgba(3, 3, 10, 0.904);
-    margin-left: 25px;
+    margin-left: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
