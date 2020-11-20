@@ -12,35 +12,33 @@ body {
     animation-name: test;
     position: relative;
     animation-timing-function: ease;
+    animation-delay: 2s;
     margin-bottom: -7px;
-    
-    
-
 }
+    
+    
+/* logo animation */
 @keyframes test {
     0% {left:0px;top:0px;}
     25% {left:660px; top:0px;}
     50% {left:0px; top:0px;}
     75% {left:0px; top:0px;}
     100% {left:0px; top:0px;}
-
-    
 }
 
-
-
-
+    
 #logoText {
-    font-size: 5.5rem;
+    font-size: 7vw;
     font-family: 'Playball', cursive;
     animation-name: loco;
     animation-duration: 7s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
+    animation-delay: 2s;
 }
+/* color animation */
 @keyframes loco {
-    /*from {color: rgb(245, 9, 9);}
-    to {color: rgb(165, 114, 114);}*/
+   
     0% {color: rgb(255, 0, 0);}
     10% {color: rgb(250, 84, 7);}
     20% {color: rgb(250, 205, 4);}
@@ -53,16 +51,6 @@ body {
     90% {color: rgba(250, 44, 44,);}
     100% {color: rgba(255, 0, 0,);}
 }    
-
-
-
-
-
-
-
-
-
-
 
 #logoText2 {
     font-size: 2.5rem;
@@ -114,7 +102,7 @@ body {
 
 .title {
     color: white;
-    text-align:center;
+   
 }
 
 
