@@ -33,7 +33,7 @@ body {
     animation-name: loco;
     animation-duration: 7s;
     animation-timing-function: ease;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-delay: 2s;
 }
 /* color animation */
@@ -52,17 +52,6 @@ body {
     100% {color: rgba(255, 0, 0,);}
 }    
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
 .hero-body {
     padding: 10px 24px;
 }
@@ -71,8 +60,6 @@ body {
     text-align: center;
 }
 
-=======
->>>>>>> a322737779d7f48221f77ea68dc87d2b07a6055f
 #logoText2 {
     font-size: 2.5rem;
 }
