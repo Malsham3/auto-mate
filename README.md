@@ -1,4 +1,4 @@
 #Auto Mate
 <!-- Auto Mate gif -->
-<!-- ![](path to image) -->
+![Auto Mate header](https://github.com/Malsham3/auto-mate/blob/main/assets/images/Auto%20Mate.gif)
 
