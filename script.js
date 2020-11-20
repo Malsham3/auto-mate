@@ -4,32 +4,29 @@
 // variables needed : Vin number and year from user.
 // format year to be numbers only.
 var vinNumber;
-var year = $("");
+var year;
 
-const statsQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vinNumber}?format=json&modelyear=${year}`;
 
 // Second API: Unsplash
 // API Key: pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
 // database URL: https://api.unsplash.com/search/photos?page=1&query={KEYWORD}&client_id=pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
-var keyWord; //get user input val()
-var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg";
-
-const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${keyWord}%20logo&client_id=${apiKey}`;
+// var keyWord; //get user input val()
+// var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg";
+// const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${keyWord}%20logo&client_id=${apiKey}`;
 
 //First,
 //AJAX call for car stats from NHTSA
 
 //Then, AJAX call for images from unsplash.
 
-//Bradley:
-//Create an event listener for button1 and button2 and include the AJAX calls above in each one. make sure you change the query selectors to the actual id names inside of our HTML.
 
 
 $("#button1").on("click", function (e) {
-  e.preventDefault();
-  vinNumber = $("#vin-1").val();
-  year = $("#year-1").val();
-  $.ajax({
+    e.preventDefault();
+    vinNumber = $("#vin-1").val();
+    year = $("#year-1").val();
+    const statsQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vinNumber}?format=json&modelyear=${year}`;
+    $.ajax({
     method: "GET",
     url: statsQueryURL,
   }).then(function (response) {
@@ -38,6 +35,7 @@ $("#button1").on("click", function (e) {
     console.log(response);
     $("#make-1").text(data.Make);
     $("#model-1").text(data.Model);
+    $("#body-1").text(data.BodyClass);
     $("#engine-1").text(data.DisplacementL + "L");
     $("#cylinder-1").text(data.EngineCylinders);
     $("#HP-1").text(data.EngineHP);
@@ -54,8 +52,9 @@ $("#button1").on("click", function (e) {
 
 $("#button2").on("click", function (e) {
     e.preventDefault();
-    vinNumber = $("#vin-2").val();
+    vinNumber = $("#vin-").val();
     year = $("#year-2").val();
+    const statsQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vinNumber}?format=json&modelyear=${year}`;
     $.ajax({
       method: "GET",
       url: statsQueryURL,
@@ -65,6 +64,7 @@ $("#button2").on("click", function (e) {
       console.log(response);
       $("#make-2").text(data.Make);
       $("#model-2").text(data.Model);
+      $("#body-2").text(data.BodyClass);
       $("#engine-2").text(data.DisplacementL + "L");
       $("#cylinder-2").text(data.EngineCylinders);
       $("#HP-2").text(data.EngineHP);
