@@ -22,10 +22,12 @@ var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg";
 
 
 
+var keyWord;
+var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg";
 $("#button1").on("click", function (e) {
     e.preventDefault();
-    var vinNumber = $("#vin-1").val().trim().toUpperCase();
-    var year = $("#year-1").val().trim();
+    vinNumber = $("#vin-1").val().trim().toUpperCase();
+    year = $("#year-1").val().trim();
     const statsQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vinNumber}?format=json&modelyear=${year}`;
     $.ajax({
         method: "GET",
@@ -37,24 +39,22 @@ $("#button1").on("click", function (e) {
         $("#make-1").text(data.Make);
         $("#model-1").text(data.Model);
         $("#body-1").text(data.BodyClass);
-        $("#engine-1").text(data.DisplacementL + "L");
+        $("#engine-1").text(parseFloat((data.DisplacementL)).toFixed(1) + "L");
         $("#cylinder-1").text(data.EngineCylinders);
-        $("#HP-1").text(data.EngineHP);
-
-        keyWord = `${data.Make}-logo`;
-
-        const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${keyWord}%20logo&client_id=${apiKey}`;
-        console.log(keyWord)
+        $("#HP-1").text(parseInt(data.EngineHP));
+        keyWord = `${data.Make}`;
+        const apiKey = "OeSI1H44HxzlgDc4LS8882xZuqikWDHL";
+        const imageQueryURL = `https://api.giphy.com/v1/gifs/search?q=${keyWord}&api_key=${apiKey}`;
         $.ajax({
             method: "GET",
             url: imageQueryURL,
         }).then(function (picture) {
-            var data2 = picture.results[1].urls.thumb;
+            console.log(picture);
+            var data2 = picture.data[0].images.original.url;
             $("#img-1").attr("src", data2);
         });
-    });
+    })
 });
-
 $("#button2").on("click", function (e) {
     e.preventDefault();
     vinNumber = $("#vin-2").val().trim().toUpperCase();
@@ -70,27 +70,19 @@ $("#button2").on("click", function (e) {
         $("#make-2").text(data.Make);
         $("#model-2").text(data.Model);
         $("#body-2").text(data.BodyClass);
-        $("#engine-2").text(data.DisplacementL + "L");
+        $("#engine-2").text(parseFloat((data.DisplacementL)).toFixed(1) + "L");
         $("#cylinder-2").text(data.EngineCylinders);
-        $("#HP-2").text(data.EngineHP);
-        keyWord = `${data.Make}-logo`;
-        
-        const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${keyWord}%20logo&client_id=${apiKey}`;
-
-        console.log(keyWord)
+        $("#HP-2").text(parseInt(data.EngineHP));
+        keyWord = `${data.Make}`;
+        const apiKey = "OeSI1H44HxzlgDc4LS8882xZuqikWDHL";
+        const imageQueryURL = `https://api.giphy.com/v1/gifs/search?q=${keyWord}&api_key=${apiKey}`;
         $.ajax({
             method: "GET",
             url: imageQueryURL,
         }).then(function (picture) {
-            var data2 = picture.results[1].urls.thumb;
+            console.log(picture);
+            var data2 = picture.data[0].images.original.url;
             $("#img-2").attr("src", data2);
         });
+    })
 })
-})
-
-
-    // `https://api.unsplash.com/search/photos?page=1&query=porsche logo&client_id=pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
-
-
-    //WP0AC2A9XFS183263  2015
-    //WUAEAAFXXH7901685 2017
