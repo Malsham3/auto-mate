@@ -42,11 +42,11 @@ Our team is very satisfied with the application we developed. Auto Mate effectiv
 
 ##Languages and technologies
 
-1. HTML
-1. CSS
-1. Javascript
-1. Bulma
-1. Fontawesome
+- HTML
+- CSS
+- Javascript
+- Bulma
+- Fontawesome
 
 ##API References
 [NHTSA Vehicle API](https://vpic.nhtsa.dot.gov/api/)
@@ -54,10 +54,10 @@ Our team is very satisfied with the application we developed. Auto Mate effectiv
 
 ##Contributors
 
-1. Bradley
-1. Jacob
-1. Mostafa
-1. Pablo
-1. and a very special appearance by Tucker
+- Bradley
+- Jacob
+- Mostafa
+- Pablo
+- and a very special appearance by Tucker
 
 ![footer](https://github.com/Malsham3/auto-mate/blob/main/assets/images/Auto%20Mate%20footer.JPG)
