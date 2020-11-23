@@ -1,59 +1,73 @@
-// First API: NHTSA
-// API Key not needed
-// database URL: https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/{VIN number}format=json&modelyear={year}
-// variables needed : Vin number and year from user.
-// format year to be numbers only.
+//declare global variables that will be updated and used inside of our functions below
+var keyWord;
 var vinNumber;
 var year;
 
-
-// Second API: Unsplash
-// API Key: pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
-// database URL: https://api.unsplash.com/search/photos?page=1&query={KEYWORD}&client_id=pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg
-// var keyWord; //get user input val()
-// var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg";
-// const imageQueryURL = `https://api.unsplash.com/search/photos?page=1&query=${keyWord}%20logo&client_id=${apiKey}`;
-
-//First,
-//AJAX call for car stats from NHTSA
-
-//Then, AJAX call for images from unsplash.
-
-
-
-var keyWord;
-var apiKey = "pBuNE2iE6rxSCwu9y9mrpwI0NdVcSm3YwKtL-cpO5eg";
+//Event listener for the first button labeled "AUTO MATE!"
 $("#button1").on("click", function (e) {
+
+    // prevent refresh after user click
     e.preventDefault();
+
+    //Get the vin number and year from the user using text fields
     vinNumber = $("#vin-1").val().trim().toUpperCase();
     year = $("#year-1").val().trim();
+
+    // query URL to be used to retrieve data from our first API, NHTSA.
     const statsQueryURL = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vinNumber}?format=json&modelyear=${year}`;
+
+    //API call
     $.ajax({
         method: "GET",
         url: statsQueryURL,
     }).then(function (response) {
-        //key features: Make, Model, BodyClass, DisplacementL, EngineCylinders, EngineHP
+
+        //storing the objects array that contains all of our needed information inside of a local variable "data" / less code. 
         var data = response.Results[0];
-        console.log(response);
+
+        // updating HTML elements to display their assigned data.
+        // display vehicle make.
         $("#make-1").text(data.Make);
+
+        //display vehicle model.
         $("#model-1").text(data.Model);
+
+        //display vehicle body style.
         $("#body-1").text(data.BodyClass);
+
+        //display vehicle engine size in Liters.
         $("#engine-1").text(parseFloat((data.DisplacementL)).toFixed(1) + "L");
+
+        //display vehicle engine cylinders number.
         $("#cylinder-1").text(data.EngineCylinders);
+
+        //display vehicle horsepower.
         $("#HP-1").text(parseInt(data.EngineHP));
+
+        //store the vehicle make inside of local variable keyWord to be used inside of the giphy query URL
         keyWord = `${data.Make}`;
+
+        //obtained Access key for the giphy API.
         const apiKey = "OeSI1H44HxzlgDc4LS8882xZuqikWDHL";
+
+        //query url to retrieve data from giphy API, using the keyWord value retrieved from previous API call.
         const imageQueryURL = `https://api.giphy.com/v1/gifs/search?q=${keyWord}&api_key=${apiKey}`;
+
         $.ajax({
             method: "GET",
             url: imageQueryURL,
         }).then(function (picture) {
-            console.log(picture);
-            var data2 = picture.data[0].images.original.url;
-            $("#img-1").attr("src", data2);
+
+            //saving the URL of the wanted image inside of carPic
+            var carPic = picture.data[0].images.original.url;
+
+            //updating the image HTML element link source to the one obtained from giphy in order to display on the web page. 
+            $("#img-1").attr("src", carPic);
         });
     })
 });
+
+// following event listener button2 follows the same method and pattern as the one above (button1) and will update information and image for vehicle 2.
 $("#button2").on("click", function (e) {
     e.preventDefault();
     vinNumber = $("#vin-2").val().trim().toUpperCase();
@@ -63,7 +77,7 @@ $("#button2").on("click", function (e) {
         method: "GET",
         url: statsQueryURL,
     }).then(function (response) {
-        //key features: Make, Model, BodyClass, DisplacementL, EngineCylinders, EngineHP
+
         var data = response.Results[0];
         console.log(response);
         $("#make-2").text(data.Make);
@@ -80,8 +94,8 @@ $("#button2").on("click", function (e) {
             url: imageQueryURL,
         }).then(function (picture) {
             console.log(picture);
-            var data2 = picture.data[0].images.original.url;
-            $("#img-2").attr("src", data2);
+            var carPic = picture.data[0].images.original.url;
+            $("#img-2").attr("src", carPic);
         });
     })
 })
